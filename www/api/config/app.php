@@ -1,6 +1,6 @@
 <?php
-$GLOBALS['lpconfig']['site_name'] = '菲米';
-$GLOBALS['lpconfig']['site_domain'] = 'fi-mi.com';
+$GLOBALS['lpconfig']['site_name'] = 'NotOnlyFans';
+$GLOBALS['lpconfig']['site_domain'] = 'notonlyfans.vip';
 
 if (getenv('WEB_ALIAS_DOMAIN')) {
     $GLOBALS['lpconfig']['mode'] = 'pro';

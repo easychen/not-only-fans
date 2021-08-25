@@ -49,9 +49,9 @@ NotOnlyFans 是一个开源的、可以自己架设的类似 `onlyfans.com` 的�
 ![](images/2021-08-25-21-36-51.png)
 
 
-## 在线演示网站
+<!-- ## 在线演示网站
 
-- <http://notonlyfans.vip/>
+- <http://notonlyfans.vip/> -->
 
 ## Self-hosted
 

@@ -51,9 +51,9 @@ NotOnlyFans is an open source, self-hosted digital content subscription platform
 ![](images/2021-08-25-21-36-51.png)
 
 
-## Online demo site
+<!-- ## Online demo site
 
-- <http://notonlyfans.vip/>
+- <http://notonlyfans.vip/> -->
 
 ## Self-hosted
 
