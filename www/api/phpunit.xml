@@ -1,0 +1,8 @@
+<phpunit>
+  <testsuites>
+    <testsuite name="Lazyphp framework">
+      <directory>tests/framework</directory>
+      <directory>tests/app</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>

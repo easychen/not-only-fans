@@ -1,0 +1,26 @@
+{
+    "require":
+    {
+        "php":">=5.3.3",
+        "league/flysystem": "^1.0",
+        "pear/math_biginteger": "^1.0",
+        "sc0vu/web3.php": "dev-master",
+        "intervention/image": "^2.4"
+    },
+    "require-dev":
+    {
+        "behat/behat": "2.4.*@stable",
+        "behat/mink": "1.4@stable",
+        "behat/mink-extension": "*",
+        "behat/mink-goutte-driver": "1.0.*@dev",
+        "crada/php-apidoc": "@dev"
+    },
+    "autoload":
+    {
+        "psr-4":
+        {
+            "Lazyphp\\": "_lp/lib/Lazyphp/",
+            "Lazyphp\\Controller\\": "controller/"
+        }
+    }
+}

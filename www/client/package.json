@@ -1,0 +1,66 @@
+{
+  "name": "lianmiweb",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@blueprintjs/core": "^2.3.1",
+    "axios": "^0.18.0",
+    "fibos.js": "^0.3.11",
+    "file-saver": "^2.0.2",
+    "i18next": "^11.3.3",
+    "i18next-browser-languagedetector": "^2.2.0",
+    "i18next-xhr-backend": "^1.5.1",
+    "mobx": "^5.0.1",
+    "mobx-react": "^5.2.3",
+    "mobx-react-devtools": "^5.0.1",
+    "qrcode.react": "^1.0.0",
+    "react": "^16.4.1",
+    "react-avatar-editor": "^11.0.4",
+    "react-cookie-consent": "^3.0.0",
+    "react-document-title": "^2.0.3",
+    "react-dropzone": "^4.2.12",
+    "react-file-reader": "^1.1.4",
+    "react-i18next": "^7.7.0",
+    "react-linkify": "^0.2.2",
+    "react-medium-image-zoom": "^3.1.2",
+    "react-modal-image": "^2.5.0",
+    "react-nl2br": "^0.4.0",
+    "react-rnd": "^8.0.2",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0",
+    "react-select": "^2.0.0-beta.7",
+    "react-timeago": "^4.1.9",
+    "react-transition-group": "^2.3.1",
+    "react-visibility-sensor": "^3.11.0",
+    "sockette": "^2.0.0",
+    "sprintf-js": "^1.1.1",
+    "styled-components": "^3.3.2",
+    "web3": "1.2.11"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.6.0",
+    "clipboard-cli": "^2.0.0",
+    "customize-cra": "^0.8.0",
+    "node-sass": "^4.13.0",
+    "react-app-rewired": "^2.1.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

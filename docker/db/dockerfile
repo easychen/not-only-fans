@@ -1,0 +1,2 @@
+FROM mariadb
+COPY notonlyfans.sql /docker-entrypoint-initdb.d/notonlyfans.sql

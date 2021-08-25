@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+pkill -f ws.server.php
+/usr/bin/php /data1/www/api.fi-mi.com/ws.server.php &

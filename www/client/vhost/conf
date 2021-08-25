@@ -1,0 +1,12 @@
+<VirtualHost *:80>
+    ServerAdmin easychen@gmail.com
+    DocumentRoot "/var/www/fi-mi.com/build"
+    ServerName fi-mi.com
+    ErrorLog ${APACHE_LOG_DIR}/fi-mi.com.e.log
+    CustomLog ${APACHE_LOG_DIR}/fi-mi.com.log common
+     <Directory /var/www/fi-mi.com/build>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>

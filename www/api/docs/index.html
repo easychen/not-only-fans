@@ -1,0 +1,5226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="php-apidoc - apid documenation generator">
+    <meta name="author" content="Calin Rada">
+    <title>php-apidoc v 1.3.4</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        body      { padding-top: 70px; margin-bottom: 15px; }
+        .tab-pane { padding-top: 10px; }
+        .mt0      { margin-top: 0px; }
+        .footer   { font-size: 12px; color: #666; }
+        .label    { display: inline-block; min-width: 65px; padding: 0.3em 0.6em 0.3em; }
+        .string   { color: green; }
+        .number   { color: darkorange; }
+        .boolean  { color: blue; }
+        .null     { color: magenta; }
+        .key      { color: red; }
+        .popover  { max-width: 400px; max-height: 400px; overflow-y: auto;}
+        code     { white-space: pre-wrap!important;padding:5px!important; }
+    </style>
+</head>
+<body>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">php-apidoc</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    Api key: <a href="javascript:void(0);" class="tooltipP" data-toggle="tooltip" title="Api key header with api key (key) and api key value (value) "><span class="glyphicon glyphicon-info-sign"></span></a>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control input-sm" placeholder="key" id="apikey_key">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control input-sm" placeholder="value" id="apikey_value">
+                </div>
+            </form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h5>Api URL</h5>
+                <input id="apiUrl" type="text" class="form-control input-sm" placeholder="http://api.mydomain.tld">
+            </div>
+        </div>
+        <hr>
+        <div class="panel-group" id="accordion">
+            <h2>Global</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">POST|GET</span> <a data-toggle="collapse" data-parent="#accordion0" href="#collapseOne0"> /attach/upload</a>
+        </h4>
+    </div>
+    <div id="collapseOne0" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab0">
+                <li class="active"><a href="#info0" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox0" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample0" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info0">
+                    图片上传
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>name</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>name</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox0">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/attach/upload" method="POST|GET" name="form0" id="form0">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="name" placeholder="name" name="name">
+</div>
+    <button type="submit" class="btn btn-success send" rel="0">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response0"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample0">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response0">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1"> /attach/{uid}/{inner_path}</a>
+        </h4>
+    </div>
+    <div id="collapseOne1" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab1">
+                <li class="active"><a href="#info1" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox1" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample1" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info1">
+                    显示图片接口
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>uid</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>uid</td>
+</tr>
+
+<tr>
+    <td>inner_path</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>inner_path</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox1">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/attach/{uid}/{inner_path}" method="GET|POST" name="form1" id="form1">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="uid" placeholder="uid" name="uid">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="inner_path" placeholder="inner_path" name="inner_path">
+</div>
+    <button type="submit" class="btn btn-success send" rel="1">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response1"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample1">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response1">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">POST|GET</span> <a data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2"> /image/upload</a>
+        </h4>
+    </div>
+    <div id="collapseOne2" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab2">
+                <li class="active"><a href="#info2" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox2" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample2" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info2">
+                    图片上传
+                    <hr>
+                    
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox2">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response2"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample2">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response2">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">POST|GET</span> <a data-toggle="collapse" data-parent="#accordion3" href="#collapseOne3"> /image/upload_thumb</a>
+        </h4>
+    </div>
+    <div id="collapseOne3" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab3">
+                <li class="active"><a href="#info3" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox3" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample3" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info3">
+                    图片上传
+                    <hr>
+                    
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox3">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response3"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample3">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response3">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+<h2>Feed</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">POST|GET</span> <a data-toggle="collapse" data-parent="#accordion4" href="#collapseOne4"> /feed/remove/{id}</a>
+        </h4>
+    </div>
+    <div id="collapseOne4" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab4">
+                <li class="active"><a href="#info4" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox4" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample4" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info4">
+                    删除内容
+                    <hr>
+                    
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox4">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response4"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample4">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response4">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+<h2>group</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">POST|GET</span> <a data-toggle="collapse" data-parent="#accordion5" href="#collapseOne5"> /group/top</a>
+        </h4>
+    </div>
+    <div id="collapseOne5" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab5">
+                <li class="active"><a href="#info5" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox5" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample5" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info5">
+                    设置栏目置顶
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>feed_id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>feed_id</td>
+</tr>
+
+<tr>
+    <td>group_id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>group_id</td>
+</tr>
+
+<tr>
+    <td>status</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>status</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox5">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/group/top" method="POST|GET" name="form5" id="form5">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="feed_id" placeholder="feed_id" name="feed_id">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="group_id" placeholder="group_id" name="group_id">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="status" placeholder="status" name="status">
+</div>
+    <button type="submit" class="btn btn-success send" rel="5">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response5"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample5">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response5">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+<h2>Feed</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">POST|GET</span> <a data-toggle="collapse" data-parent="#accordion6" href="#collapseOne6"> /feed/update/{id}</a>
+        </h4>
+    </div>
+    <div id="collapseOne6" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab6">
+                <li class="active"><a href="#info6" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox6" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample6" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info6">
+                    更新内容
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>text</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>text</td>
+</tr>
+
+<tr>
+    <td>images</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>images</td>
+</tr>
+
+<tr>
+    <td>attach</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>attach</td>
+</tr>
+
+<tr>
+    <td>is_paid</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>is_paid</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox6">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/feed/update/{id}" method="POST|GET" name="form6" id="form6">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="text" placeholder="text" name="text">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="images" placeholder="images" name="images">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="attach" placeholder="attach" name="attach">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="is_paid" placeholder="is_paid" name="is_paid">
+</div>
+    <button type="submit" class="btn btn-success send" rel="6">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response6"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response6">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">POST|GET</span> <a data-toggle="collapse" data-parent="#accordion7" href="#collapseOne7"> /feed/publish</a>
+        </h4>
+    </div>
+    <div id="collapseOne7" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab7">
+                <li class="active"><a href="#info7" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox7" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample7" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info7">
+                    发布内容
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>text</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>text</td>
+</tr>
+
+<tr>
+    <td>groups</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>groups</td>
+</tr>
+
+<tr>
+    <td>images</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>images</td>
+</tr>
+
+<tr>
+    <td>attach</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>attach</td>
+</tr>
+
+<tr>
+    <td>is_paid</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>is_paid</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox7">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/feed/publish" method="POST|GET" name="form7" id="form7">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="text" placeholder="text" name="text">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="groups" placeholder="groups" name="groups">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="images" placeholder="images" name="images">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="attach" placeholder="attach" name="attach">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="is_paid" placeholder="is_paid" name="is_paid">
+</div>
+    <button type="submit" class="btn btn-success send" rel="7">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response7"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample7">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response7">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+<h2>Group</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion8" href="#collapseOne8"> /group/mine</a>
+        </h4>
+    </div>
+    <div id="collapseOne8" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab8">
+                <li class="active"><a href="#info8" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox8" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample8" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info8">
+                    获得栏目列表
+                    <hr>
+                    
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox8">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response8"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample8">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response8">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion9" href="#collapseOne9"> /group/feed/{id}</a>
+        </h4>
+    </div>
+    <div id="collapseOne9" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab9">
+                <li class="active"><a href="#info9" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox9" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample9" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info9">
+                    检查栏目购买数据
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>id</td>
+</tr>
+
+<tr>
+    <td>since_id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>since_id</td>
+</tr>
+
+<tr>
+    <td>filter</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>filter</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox9">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/group/feed/{id}" method="GET|POST" name="form9" id="form9">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="id" placeholder="id" name="id">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="since_id" placeholder="since_id" name="since_id">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="filter" placeholder="filter" name="filter">
+</div>
+    <button type="submit" class="btn btn-success send" rel="9">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response9"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample9">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response9">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion10" href="#collapseOne10"> /group/blacklist</a>
+        </h4>
+    </div>
+    <div id="collapseOne10" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab10">
+                <li class="active"><a href="#info10" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox10" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample10" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info10">
+                    设置栏目成员黑名单
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>uid</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>uid</td>
+</tr>
+
+<tr>
+    <td>group_id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>group_id</td>
+</tr>
+
+<tr>
+    <td>status</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>status</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox10">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/group/blacklist" method="GET|POST" name="form10" id="form10">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="uid" placeholder="uid" name="uid">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="group_id" placeholder="group_id" name="group_id">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="status" placeholder="status" name="status">
+</div>
+    <button type="submit" class="btn btn-success send" rel="10">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response10"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample10">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response10">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion11" href="#collapseOne11"> /group/contribute_blacklist</a>
+        </h4>
+    </div>
+    <div id="collapseOne11" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab11">
+                <li class="active"><a href="#info11" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox11" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample11" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info11">
+                    设置栏目投稿黑名单
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>uid</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>uid</td>
+</tr>
+
+<tr>
+    <td>group_id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>group_id</td>
+</tr>
+
+<tr>
+    <td>status</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>status</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox11">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/group/contribute_blacklist" method="GET|POST" name="form11" id="form11">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="uid" placeholder="uid" name="uid">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="group_id" placeholder="group_id" name="group_id">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="status" placeholder="status" name="status">
+</div>
+    <button type="submit" class="btn btn-success send" rel="11">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response11"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample11">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response11">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion12" href="#collapseOne12"> /group/comment_blacklist</a>
+        </h4>
+    </div>
+    <div id="collapseOne12" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab12">
+                <li class="active"><a href="#info12" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox12" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample12" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info12">
+                    设置栏目评论黑名单
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>uid</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>uid</td>
+</tr>
+
+<tr>
+    <td>group_id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>group_id</td>
+</tr>
+
+<tr>
+    <td>status</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>status</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox12">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/group/comment_blacklist" method="GET|POST" name="form12" id="form12">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="uid" placeholder="uid" name="uid">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="group_id" placeholder="group_id" name="group_id">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="status" placeholder="status" name="status">
+</div>
+    <button type="submit" class="btn btn-success send" rel="12">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response12"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample12">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response12">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion13" href="#collapseOne13"> /group/member/{id}</a>
+        </h4>
+    </div>
+    <div id="collapseOne13" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab13">
+                <li class="active"><a href="#info13" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox13" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample13" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info13">
+                    获取栏目成员列表
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>id</td>
+</tr>
+
+<tr>
+    <td>since_id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>since_id</td>
+</tr>
+
+<tr>
+    <td>filter</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>filter</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox13">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/group/member/{id}" method="GET|POST" name="form13" id="form13">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="id" placeholder="id" name="id">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="since_id" placeholder="since_id" name="since_id">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="filter" placeholder="filter" name="filter">
+</div>
+    <button type="submit" class="btn btn-success send" rel="13">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response13"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample13">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response13">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">POST|GET</span> <a data-toggle="collapse" data-parent="#accordion14" href="#collapseOne14"> /group/create</a>
+        </h4>
+    </div>
+    <div id="collapseOne14" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab14">
+                <li class="active"><a href="#info14" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox14" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample14" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info14">
+                    创建栏目
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>name</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>name</td>
+</tr>
+
+<tr>
+    <td>author_address</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>author_address</td>
+</tr>
+
+<tr>
+    <td>price_wei</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>price_wei</td>
+</tr>
+
+<tr>
+    <td>cover</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>cover</td>
+</tr>
+
+<tr>
+    <td>seller_uid</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>seller_uid</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox14">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/group/create" method="POST|GET" name="form14" id="form14">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="name" placeholder="name" name="name">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="author_address" placeholder="author_address" name="author_address">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="price_wei" placeholder="price_wei" name="price_wei">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="cover" placeholder="cover" name="cover">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="seller_uid" placeholder="seller_uid" name="seller_uid">
+</div>
+    <button type="submit" class="btn btn-success send" rel="14">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response14"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample14">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response14">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion15" href="#collapseOne15"> /group/join/{id}</a>
+        </h4>
+    </div>
+    <div id="collapseOne15" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab15">
+                <li class="active"><a href="#info15" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox15" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample15" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info15">
+                    检查栏目购买数据
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>id</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox15">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/group/join/{id}" method="GET|POST" name="form15" id="form15">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="id" placeholder="id" name="id">
+</div>
+    <button type="submit" class="btn btn-success send" rel="15">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response15"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample15">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response15">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion16" href="#collapseOne16"> /group/quit/{id}</a>
+        </h4>
+    </div>
+    <div id="collapseOne16" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab16">
+                <li class="active"><a href="#info16" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox16" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample16" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info16">
+                    检查栏目购买数据
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>id</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox16">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/group/quit/{id}" method="GET|POST" name="form16" id="form16">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="id" placeholder="id" name="id">
+</div>
+    <button type="submit" class="btn btn-success send" rel="16">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response16"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample16">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response16">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion17" href="#collapseOne17"> /user/self</a>
+        </h4>
+    </div>
+    <div id="collapseOne17" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab17">
+                <li class="active"><a href="#info17" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox17" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample17" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info17">
+                    
+                    <hr>
+                    
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox17">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response17"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample17">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response17">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion18" href="#collapseOne18"> /group/vip/check/{id}</a>
+        </h4>
+    </div>
+    <div id="collapseOne18" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab18">
+                <li class="active"><a href="#info18" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox18" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample18" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info18">
+                    检查栏目购买数据
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>id</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox18">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/group/vip/check/{id}" method="GET|POST" name="form18" id="form18">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="id" placeholder="id" name="id">
+</div>
+    <button type="submit" class="btn btn-success send" rel="18">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response18"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample18">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response18">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion19" href="#collapseOne19"> /group/preorder/{group_id}</a>
+        </h4>
+    </div>
+    <div id="collapseOne19" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab19">
+                <li class="active"><a href="#info19" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox19" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample19" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info19">
+                    获取栏目投稿
+                    <hr>
+                    
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox19">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response19"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample19">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response19">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion20" href="#collapseOne20"> /group/checkorder</a>
+        </h4>
+    </div>
+    <div id="collapseOne20" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab20">
+                <li class="active"><a href="#info20" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox20" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample20" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info20">
+                    获取栏目投稿
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>order_id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>order_id</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox20">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/group/checkorder" method="GET|POST" name="form20" id="form20">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="order_id" placeholder="order_id" name="order_id">
+</div>
+    <button type="submit" class="btn btn-success send" rel="20">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response20"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample20">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response20">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion21" href="#collapseOne21"> /group/contribute/update</a>
+        </h4>
+    </div>
+    <div id="collapseOne21" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab21">
+                <li class="active"><a href="#info21" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox21" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample21" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info21">
+                    获取栏目投稿
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>group_id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>group_id</td>
+</tr>
+
+<tr>
+    <td>feed_id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>feed_id</td>
+</tr>
+
+<tr>
+    <td>status</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>status</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox21">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/group/contribute/update" method="GET|POST" name="form21" id="form21">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="group_id" placeholder="group_id" name="group_id">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="feed_id" placeholder="feed_id" name="feed_id">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="status" placeholder="status" name="status">
+</div>
+    <button type="submit" class="btn btn-success send" rel="21">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response21"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample21">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response21">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion22" href="#collapseOne22"> /group/contribute</a>
+        </h4>
+    </div>
+    <div id="collapseOne22" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab22">
+                <li class="active"><a href="#info22" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox22" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample22" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info22">
+                    获取栏目投稿
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>since_id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>since_id</td>
+</tr>
+
+<tr>
+    <td>filter</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>filter</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox22">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/group/contribute" method="GET|POST" name="form22" id="form22">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="since_id" placeholder="since_id" name="since_id">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="filter" placeholder="filter" name="filter">
+</div>
+    <button type="submit" class="btn btn-success send" rel="22">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response22"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample22">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response22">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+<h2>Feed</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion23" href="#collapseOne23"> /comment/remove</a>
+        </h4>
+    </div>
+    <div id="collapseOne23" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab23">
+                <li class="active"><a href="#info23" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox23" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample23" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info23">
+                    删除内容评论
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>id</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox23">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/comment/remove" method="GET|POST" name="form23" id="form23">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="id" placeholder="id" name="id">
+</div>
+    <button type="submit" class="btn btn-success send" rel="23">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response23"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample23">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response23">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion24" href="#collapseOne24"> /feed/comment/{id}</a>
+        </h4>
+    </div>
+    <div id="collapseOne24" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab24">
+                <li class="active"><a href="#info24" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox24" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample24" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info24">
+                    对内容发起评论
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>id</td>
+</tr>
+
+<tr>
+    <td>text</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>comment</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox24">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/feed/comment/{id}" method="GET|POST" name="form24" id="form24">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="id" placeholder="id" name="id">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="text" placeholder="text" name="text">
+</div>
+    <button type="submit" class="btn btn-success send" rel="24">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response24"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample24">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response24">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+<h2>User</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">POST|GET</span> <a data-toggle="collapse" data-parent="#accordion25" href="#collapseOne25"> /user/update_password</a>
+        </h4>
+    </div>
+    <div id="collapseOne25" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab25">
+                <li class="active"><a href="#info25" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox25" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample25" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info25">
+                    更新用户密码
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>old_password</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>old_password</td>
+</tr>
+
+<tr>
+    <td>new_password</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>new_password</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox25">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/user/update_password" method="POST|GET" name="form25" id="form25">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="old_password" placeholder="old_password" name="old_password">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="new_password" placeholder="new_password" name="new_password">
+</div>
+    <button type="submit" class="btn btn-success send" rel="25">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response25"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample25">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response25">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">POST|GET</span> <a data-toggle="collapse" data-parent="#accordion26" href="#collapseOne26"> /user/update_profile</a>
+        </h4>
+    </div>
+    <div id="collapseOne26" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab26">
+                <li class="active"><a href="#info26" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox26" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample26" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info26">
+                    更新用户资料
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>nickname</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>nickname</td>
+</tr>
+
+<tr>
+    <td>address</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>address</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox26">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/user/update_profile" method="POST|GET" name="form26" id="form26">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="nickname" placeholder="nickname" name="nickname">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="address" placeholder="address" name="address">
+</div>
+    <button type="submit" class="btn btn-success send" rel="26">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response26"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample26">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response26">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">POST|GET</span> <a data-toggle="collapse" data-parent="#accordion27" href="#collapseOne27"> /user/update_avatar</a>
+        </h4>
+    </div>
+    <div id="collapseOne27" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab27">
+                <li class="active"><a href="#info27" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox27" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample27" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info27">
+                    更新用户头像
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>avatar</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>avatar</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox27">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/user/update_avatar" method="POST|GET" name="form27" id="form27">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="avatar" placeholder="avatar" name="avatar">
+</div>
+    <button type="submit" class="btn btn-success send" rel="27">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response27"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample27">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response27">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">POST|GET</span> <a data-toggle="collapse" data-parent="#accordion28" href="#collapseOne28"> /user/update_cover</a>
+        </h4>
+    </div>
+    <div id="collapseOne28" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab28">
+                <li class="active"><a href="#info28" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox28" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample28" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info28">
+                    更新用户封面
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>cover</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>cover</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox28">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/user/update_cover" method="POST|GET" name="form28" id="form28">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="cover" placeholder="cover" name="cover">
+</div>
+    <button type="submit" class="btn btn-success send" rel="28">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response28"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample28">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response28">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+<h2>Group</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">POST|GET</span> <a data-toggle="collapse" data-parent="#accordion29" href="#collapseOne29"> /group/update_settings</a>
+        </h4>
+    </div>
+    <div id="collapseOne29" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab29">
+                <li class="active"><a href="#info29" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox29" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample29" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info29">
+                    更新栏目资料
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>id</td>
+</tr>
+
+<tr>
+    <td>name</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>name</td>
+</tr>
+
+<tr>
+    <td>cover</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>cover</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox29">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/group/update_settings" method="POST|GET" name="form29" id="form29">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="id" placeholder="id" name="id">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="name" placeholder="name" name="name">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="cover" placeholder="cover" name="cover">
+</div>
+    <button type="submit" class="btn btn-success send" rel="29">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response29"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample29">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response29">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+<h2>User</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">POST|GET</span> <a data-toggle="collapse" data-parent="#accordion30" href="#collapseOne30"> /user/inblacklist</a>
+        </h4>
+    </div>
+    <div id="collapseOne30" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab30">
+                <li class="active"><a href="#info30" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox30" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample30" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info30">
+                    判断某用户是否在黑名单
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>uid</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>uid</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox30">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/user/inblacklist" method="POST|GET" name="form30" id="form30">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="uid" placeholder="uid" name="uid">
+</div>
+    <button type="submit" class="btn btn-success send" rel="30">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response30"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample30">
+                    <div class="row">
+                        <div class="col-md-12">
+                            NA
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">POST|GET</span> <a data-toggle="collapse" data-parent="#accordion31" href="#collapseOne31"> /user/blacklist_set</a>
+        </h4>
+    </div>
+    <div id="collapseOne31" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab31">
+                <li class="active"><a href="#info31" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox31" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample31" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info31">
+                    将某用户添加/移出黑名单
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>uid</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>uid</td>
+</tr>
+
+<tr>
+    <td>status</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>status</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox31">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/user/blacklist_set" method="POST|GET" name="form31" id="form31">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="uid" placeholder="uid" name="uid">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="status" placeholder="status" name="status">
+</div>
+    <button type="submit" class="btn btn-success send" rel="31">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response31"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample31">
+                    <div class="row">
+                        <div class="col-md-12">
+                            NA
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">POST|GET</span> <a data-toggle="collapse" data-parent="#accordion32" href="#collapseOne32"> /user/blacklist</a>
+        </h4>
+    </div>
+    <div id="collapseOne32" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab32">
+                <li class="active"><a href="#info32" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox32" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample32" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info32">
+                    获得当前用户的黑名单
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>since_id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>since_id</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox32">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/user/blacklist" method="POST|GET" name="form32" id="form32">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="since_id" placeholder="since_id" name="since_id">
+</div>
+    <button type="submit" class="btn btn-success send" rel="32">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response32"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample32">
+                    <div class="row">
+                        <div class="col-md-12">
+                            NA
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+<h2>Feed</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion33" href="#collapseOne33"> /timeline/top</a>
+        </h4>
+    </div>
+    <div id="collapseOne33" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab33">
+                <li class="active"><a href="#info33" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox33" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample33" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info33">
+                    获取当前用户的首页信息流
+                    <hr>
+                    
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox33">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response33"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample33">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response33">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion34" href="#collapseOne34"> /timeline</a>
+        </h4>
+    </div>
+    <div id="collapseOne34" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab34">
+                <li class="active"><a href="#info34" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox34" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample34" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info34">
+                    获取当前用户的首页信息流
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>since_id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>since_id</td>
+</tr>
+
+<tr>
+    <td>filter</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>filter</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox34">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/timeline" method="GET|POST" name="form34" id="form34">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="since_id" placeholder="since_id" name="since_id">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="filter" placeholder="filter" name="filter">
+</div>
+    <button type="submit" class="btn btn-success send" rel="34">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response34"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample34">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response34">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion35" href="#collapseOne35"> /timeline/lastid</a>
+        </h4>
+    </div>
+    <div id="collapseOne35" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab35">
+                <li class="active"><a href="#info35" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox35" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample35" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info35">
+                    获取当前用户的首页信息流最新ID
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>filter</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>filter</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox35">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/timeline/lastid" method="GET|POST" name="form35" id="form35">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="filter" placeholder="filter" name="filter">
+</div>
+    <button type="submit" class="btn btn-success send" rel="35">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response35"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample35">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response35">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+<h2>Message</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion36" href="#collapseOne36"> /message/lastest_id/{to_uid}</a>
+        </h4>
+    </div>
+    <div id="collapseOne36" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab36">
+                <li class="active"><a href="#info36" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox36" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample36" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info36">
+                    获得和某个用户的聊天记录最新id
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>to_uid</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>to_uid</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox36">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/message/lastest_id/{to_uid}" method="GET|POST" name="form36" id="form36">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="to_uid" placeholder="to_uid" name="to_uid">
+</div>
+    <button type="submit" class="btn btn-success send" rel="36">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response36"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample36">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response36">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion37" href="#collapseOne37"> /message/unread</a>
+        </h4>
+    </div>
+    <div id="collapseOne37" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab37">
+                <li class="active"><a href="#info37" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox37" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample37" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info37">
+                    获得当前用户未读信息数量
+                    <hr>
+                    
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox37">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response37"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample37">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response37">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion38" href="#collapseOne38"> /message/grouplist</a>
+        </h4>
+    </div>
+    <div id="collapseOne38" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab38">
+                <li class="active"><a href="#info38" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox38" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample38" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info38">
+                    获得当前用户的最新消息分组列表页面
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>since_id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>since_id</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox38">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/message/grouplist" method="GET|POST" name="form38" id="form38">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="since_id" placeholder="since_id" name="since_id">
+</div>
+    <button type="submit" class="btn btn-success send" rel="38">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response38"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample38">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response38">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion39" href="#collapseOne39"> /message/history/{to_uid}</a>
+        </h4>
+    </div>
+    <div id="collapseOne39" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab39">
+                <li class="active"><a href="#info39" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox39" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample39" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info39">
+                    获得和某个用户的聊天记录
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>to_uid</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>to_uid</td>
+</tr>
+
+<tr>
+    <td>since_id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>since_id</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox39">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/message/history/{to_uid}" method="GET|POST" name="form39" id="form39">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="to_uid" placeholder="to_uid" name="to_uid">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="since_id" placeholder="since_id" name="since_id">
+</div>
+    <button type="submit" class="btn btn-success send" rel="39">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response39"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample39">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response39">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion40" href="#collapseOne40"> /message/send/{to_uid}</a>
+        </h4>
+    </div>
+    <div id="collapseOne40" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab40">
+                <li class="active"><a href="#info40" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox40" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample40" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info40">
+                    向某用户发送私信
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>to_uid</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>to_uid</td>
+</tr>
+
+<tr>
+    <td>text</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>text</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox40">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/message/send/{to_uid}" method="GET|POST" name="form40" id="form40">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="to_uid" placeholder="to_uid" name="to_uid">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="text" placeholder="text" name="text">
+</div>
+    <button type="submit" class="btn btn-success send" rel="40">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response40"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample40">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response40">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion41" href="#collapseOne41"> /user/refresh</a>
+        </h4>
+    </div>
+    <div id="collapseOne41" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab41">
+                <li class="active"><a href="#info41" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox41" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample41" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info41">
+                    刷新服务器端用户数据
+                    <hr>
+                    
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox41">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response41"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample41">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response41">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+<h2>User</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">POST|GET</span> <a data-toggle="collapse" data-parent="#accordion42" href="#collapseOne42"> /user/register</a>
+        </h4>
+    </div>
+    <div id="collapseOne42" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab42">
+                <li class="active"><a href="#info42" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox42" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample42" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info42">
+                    用户注册接口
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>email</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>email</td>
+</tr>
+
+<tr>
+    <td>nickname</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>nickname</td>
+</tr>
+
+<tr>
+    <td>username</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>username</td>
+</tr>
+
+<tr>
+    <td>password</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>password</td>
+</tr>
+
+<tr>
+    <td>address</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>address</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox42">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/user/register" method="POST|GET" name="form42" id="form42">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="email" placeholder="email" name="email">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="nickname" placeholder="nickname" name="nickname">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="username" placeholder="username" name="username">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="password" placeholder="password" name="password">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="address" placeholder="address" name="address">
+</div>
+    <button type="submit" class="btn btn-success send" rel="42">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response42"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample42">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response42">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">POST|GET</span> <a data-toggle="collapse" data-parent="#accordion43" href="#collapseOne43"> /user/login</a>
+        </h4>
+    </div>
+    <div id="collapseOne43" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab43">
+                <li class="active"><a href="#info43" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox43" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample43" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info43">
+                    用户登入接口
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>email</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>email</td>
+</tr>
+
+<tr>
+    <td>password</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>password</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox43">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/user/login" method="POST|GET" name="form43" id="form43">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="email" placeholder="email" name="email">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="password" placeholder="password" name="password">
+</div>
+    <button type="submit" class="btn btn-success send" rel="43">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response43"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample43">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response43">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+<h2>Global</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion44" href="#collapseOne44"> /image/{uid}/{inner_path}</a>
+        </h4>
+    </div>
+    <div id="collapseOne44" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab44">
+                <li class="active"><a href="#info44" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox44" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample44" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info44">
+                    显示图片接口
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>uid</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>uid</td>
+</tr>
+
+<tr>
+    <td>inner_path</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>inner_path</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox44">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/image/{uid}/{inner_path}" method="GET|POST" name="form44" id="form44">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="uid" placeholder="uid" name="uid">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="inner_path" placeholder="inner_path" name="inner_path">
+</div>
+    <button type="submit" class="btn btn-success send" rel="44">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response44"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample44">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response44">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+<h2>Group</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion45" href="#collapseOne45"> /group/detail/{id}</a>
+        </h4>
+    </div>
+    <div id="collapseOne45" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab45">
+                <li class="active"><a href="#info45" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox45" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample45" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info45">
+                    显示栏目基本信息接口
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>id</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox45">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/group/detail/{id}" method="GET|POST" name="form45" id="form45">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="id" placeholder="id" name="id">
+</div>
+    <button type="submit" class="btn btn-success send" rel="45">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response45"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample45">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response45">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion46" href="#collapseOne46"> /group/top100</a>
+        </h4>
+    </div>
+    <div id="collapseOne46" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab46">
+                <li class="active"><a href="#info46" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox46" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample46" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info46">
+                    获得栏目列表
+                    <hr>
+                    
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox46">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response46"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample46">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response46">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+<h2>User</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion47" href="#collapseOne47"> /user/detail/{id}</a>
+        </h4>
+    </div>
+    <div id="collapseOne47" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab47">
+                <li class="active"><a href="#info47" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox47" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample47" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info47">
+                    获取用户基本信息接口
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>id</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox47">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/user/detail/{id}" method="GET|POST" name="form47" id="form47">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="id" placeholder="id" name="id">
+</div>
+    <button type="submit" class="btn btn-success send" rel="47">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response47"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample47">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response47">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+<h2>Feed</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion48" href="#collapseOne48"> /feed/detail/{id}</a>
+        </h4>
+    </div>
+    <div id="collapseOne48" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab48">
+                <li class="active"><a href="#info48" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox48" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample48" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info48">
+                    获取内容的全部内容
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>id</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox48">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/feed/detail/{id}" method="GET|POST" name="form48" id="form48">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="id" placeholder="id" name="id">
+</div>
+    <button type="submit" class="btn btn-success send" rel="48">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response48"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample48">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response48">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion49" href="#collapseOne49"> /feed/comment/list/{id}</a>
+        </h4>
+    </div>
+    <div id="collapseOne49" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab49">
+                <li class="active"><a href="#info49" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox49" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample49" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info49">
+                    对内容发起评论
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>since_id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>since_id</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox49">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/feed/comment/list/{id}" method="GET|POST" name="form49" id="form49">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="since_id" placeholder="since_id" name="since_id">
+</div>
+    <button type="submit" class="btn btn-success send" rel="49">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response49"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample49">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response49">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+<h2>User</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion50" href="#collapseOne50"> /user/feed/{id}</a>
+        </h4>
+    </div>
+    <div id="collapseOne50" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab50">
+                <li class="active"><a href="#info50" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox50" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample50" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info50">
+                    获取用户内容列表
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>id</td>
+</tr>
+
+<tr>
+    <td>since_id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>since_id</td>
+</tr>
+
+<tr>
+    <td>filter</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>filter</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox50">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/user/feed/{id}" method="GET|POST" name="form50" id="form50">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="id" placeholder="id" name="id">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="since_id" placeholder="since_id" name="since_id">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="filter" placeholder="filter" name="filter">
+</div>
+    <button type="submit" class="btn btn-success send" rel="50">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response50"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample50">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response50">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+<h2>Group</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion51" href="#collapseOne51"> /group/contract/check/{id}</a>
+        </h4>
+    </div>
+    <div id="collapseOne51" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab51">
+                <li class="active"><a href="#info51" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox51" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample51" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info51">
+                    检查栏目购买数据
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>id</td>
+    <td>int</td>
+    <td>Yes</td>
+    <td>id</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox51">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/group/contract/check/{id}" method="GET|POST" name="form51" id="form51">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="id" placeholder="id" name="id">
+</div>
+    <button type="submit" class="btn btn-success send" rel="51">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response51"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample51">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response51">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">GET|POST</span> <a data-toggle="collapse" data-parent="#accordion52" href="#collapseOne52"> /logout</a>
+        </h4>
+    </div>
+    <div id="collapseOne52" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab52">
+                <li class="active"><a href="#info52" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox52" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample52" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info52">
+                    
+                    <hr>
+                    
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox52">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response52"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample52">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response52">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+<h2>Demo</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label label-success">GET</span> <a data-toggle="collapse" data-parent="#accordion53" href="#collapseOne53"> /</a>
+        </h4>
+    </div>
+    <div id="collapseOne53" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab53">
+                <li class="active"><a href="#info53" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox53" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample53" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info53">
+                    乘法接口
+                    <hr>
+                    
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox53">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response53"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample53">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response53">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+<h2>translate</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label ">POST|GET</span> <a data-toggle="collapse" data-parent="#accordion54" href="#collapseOne54"> /misswords</a>
+        </h4>
+    </div>
+    <div id="collapseOne54" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab54">
+                <li class="active"><a href="#info54" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox54" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample54" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info54">
+                    翻译接口
+                    <hr>
+                    
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox54">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response54"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample54">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response54">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+<h2>Demo</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label label-success">GET</span> <a data-toggle="collapse" data-parent="#accordion55" href="#collapseOne55"> /demo/times</a>
+        </h4>
+    </div>
+    <div id="collapseOne55" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab55">
+                <li class="active"><a href="#info55" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox55" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample55" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info55">
+                    乘法接口
+                    <hr>
+                    
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+<tr>
+    <td>first</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>first</td>
+</tr>
+
+<tr>
+    <td>second</td>
+    <td>string</td>
+    <td>Yes</td>
+    <td>second</td>
+</tr>
+    </tbody>
+</table>
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox55">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+<form enctype="application/x-www-form-urlencoded" role="form" action="/demo/times" method="GET" name="form55" id="form55">
+    
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="first" placeholder="first" name="first">
+</div>
+
+<div class="form-group">
+    <input type="text" class="form-control input-sm" id="second" placeholder="second" name="second">
+</div>
+    <button type="submit" class="btn btn-success send" rel="55">Send</button>
+</form>
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response55"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample55">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response55">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <span class="label label-success">GET</span> <a data-toggle="collapse" data-parent="#accordion56" href="#collapseOne56"> /test</a>
+        </h4>
+    </div>
+    <div id="collapseOne56" class="panel-collapse collapse">
+        <div class="panel-body">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="php-apidoctab56">
+                <li class="active"><a href="#info56" data-toggle="tab">Info</a></li>
+                <li><a href="#sandbox56" data-toggle="tab">Sandbox</a></li>
+                <li><a href="#sample56" data-toggle="tab">Sample output</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+
+                <div class="tab-pane active" id="info56">
+                    乘法接口
+                    <hr>
+                    
+                </div><!-- #info -->
+
+                <div class="tab-pane" id="sandbox56">
+                    <div class="row">
+                        <div class="col-md-4">
+                            Parameters
+                            <hr>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            Headers
+                            <hr>Soon...
+                        </div>
+                        <div class="col-md-4">
+                            Response
+                            <hr>
+                            <code id="response56"></code>
+                        </div>
+                    </div>
+                </div><!-- #sandbox -->
+
+                <div class="tab-pane" id="sample56">
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+
+<hr>
+<pre id="sample_response56">{'code': 0,'message': 'success'}</pre>
+                        </div>
+                    </div>
+                </div><!-- #sample -->
+
+            </div><!-- .tab-content -->
+        </div>
+    </div>
+</div>
+        </div>
+        <hr>
+
+        <div class="row mt0 footer">
+            <div class="col-md-6" align="left">
+                Generated on 2020-01-23, 20:29:13
+            </div>
+            <div class="col-md-6" align="right">
+                <a href="https://github.com/calinrada/php-apidoc" target="_blank">php-apidoc v 1.3.4</a>
+            </div>
+        </div>
+
+    </div> <!-- /container -->
+
+    <script src="http://libs.useso.com/js/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    function syntaxHighlight(json) {
+        if (typeof json != 'string') {
+            json = JSON.stringify(json, undefined, 2);
+        }
+        json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function(match) {
+            var cls = 'number';
+            if (/^"/.test(match)) {
+                if (/:$/.test(match)) {
+                    cls = 'key';
+                } else {
+                    cls = 'string';
+                }
+            } else if (/true|false/.test(match)) {
+                cls = 'boolean';
+            } else if (/null/.test(match)) {
+                cls = 'null';
+            }
+            return '<span class="' + cls + '">' + match + '</span>';
+        });
+    }
+
+    $(document).ready(function() {
+
+        $('#php-apidoctab a').click(function(e) {
+            e.preventDefault()
+            $(this).tab('show')
+        });
+
+        $('.tooltipP').tooltip({
+            placement: 'bottom'
+        });
+
+        $('code[id^=response]').hide();
+
+        $.each($('pre[id^=sample_response]'), function() {
+            if ($(this).html() == 'NA') {
+                return;
+            }
+            var str = JSON.stringify(JSON.parse($(this).html().replace(/'/g, '"')), undefined, 4);
+            $(this).html(syntaxHighlight(str));
+        });
+
+        $("[data-toggle=popover]").popover({placement:'right'});
+
+        $('body').on('shown.bs.popover', function() {
+            var $sample = $(this).find(".popover-content");
+            if ($sample.html() == 'NA') {
+                return;
+            }
+            var str = JSON.stringify(JSON.parse($sample.html().replace(/'/g, '"')), undefined, 2);
+            $sample.html('<pre>' + syntaxHighlight(str) + '</pre>');
+        });
+
+        $('body').on('click', '.send', function(e) {
+            e.preventDefault();
+            var form = $(this).closest('form');
+            var matchedParamsInRoute = $(form).attr('action').match(/{\w+}$/);
+            var theId = $(this).attr('rel');
+            if (matchedParamsInRoute) {
+                $("form#" + $(form).attr('id') + " input[type=text]").each(function() {
+                    var input = $(this);
+                    var index;
+                    for (index = 0; index < matchedParamsInRoute.length; ++index) {
+                        try {
+                            var tmp = matchedParamsInRoute[index].replace('{', '').replace('}', '');
+                            if ($(this).attr('id') == tmp) {
+                                var newFormAction = $(form).attr('action').replace(matchedParamsInRoute[index], $(this).val());
+                                $(form).attr('action', newFormAction);
+                            }
+                        } catch (err) {
+                            console.log(err);
+                        }
+                    }
+                });
+            };
+            var st_headers = {};
+            st_headers[$('#apikey_key').val()] = $('#apikey_value').val();
+            $.ajax({
+                url: $('#apiUrl').val() + $(form).attr('action'),
+                data: $(form).serialize(),
+                type: '' + $(form).attr('method') + '',
+                dataType: 'json',
+                headers: st_headers
+            }).done(function(data) {
+                if (typeof data === 'object') {
+                    $('#response' + theId).html(JSON.stringify(data));
+                } else {
+                    $('#response' + theId).html(data);
+                }
+                $('#response' + theId).show();
+            }).error(function(xhr, textStatus, error) {
+                $('#response' + theId).html(textStatus);
+                $('#response' + theId).show();
+            });
+            return false;
+        });
+    });
+    </script>
+</body>
+</html>

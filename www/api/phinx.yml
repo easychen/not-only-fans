@@ -1,0 +1,63 @@
+<?php
+
+define( 'DS' , DIRECTORY_SEPARATOR );
+define( 'AROOT' , dirname( __FILE__ ) . DS  );
+define( 'FROOT' , dirname( __FILE__ ) . DS . '_lp' . DS );
+
+require AROOT . 'vendor' . DS . 'autoload.php';
+require_once FROOT . 'lib' . DS . 'functions.php'; // 公用函数
+require_once FROOT . 'config' . DS . 'core.php'; // 核心配置
+require_once AROOT . 'config' . DS . 'database.php'; // 数据库配置
+require_once AROOT . 'config' . DS . 'app.php'; // 应用配置
+
+date_default_timezone_set('Asia/Chongqing');
+
+$dev = c('database_dev');
+$pro = c('database');
+
+$config = array
+(
+    'paths' => array
+    (
+        'migrations' => 'migrations'
+    ),
+    'environments' => array
+    (
+        'default_migration_table' => 'phinxlog',
+        'default_database' => 'development',
+        'production' => array
+        (
+            'adapter' => $pro['adapter'],
+            'host' => $pro['host'],
+            'name' => $pro['name'],
+            'user' => $pro['user'],
+            'pass' => $pro['pass'],
+            'port' => $pro['port'],
+            'charset' => $pro['charset']
+        ),
+        'development' => array
+        (
+            'adapter' => $dev['adapter'],
+            'host' => $dev['host'],
+            'name' => $dev['name'],
+            'user' => $dev['user'],
+            'pass' => $dev['pass'],
+            'port' => $dev['port'],
+            'charset' => $dev['charset']
+        ),
+        'testing' => array
+        (
+            'adapter' => $dev['adapter'],
+            'host' => $dev['host'],
+            'name' => $dev['name'],
+            'user' => $dev['user'],
+            'pass' => $dev['pass'],
+            'port' => $dev['port'],
+            'charset' => $dev['charset']
+        )
+    )
+);
+
+//print_r( $config );
+
+return $config;

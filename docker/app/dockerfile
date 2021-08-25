@@ -1,0 +1,4 @@
+FROM webdevops/php-apache:7.4-alpine
+COPY vhost.conf /opt/docker/etc/httpd/vhost.conf
+RUN apk add npm
+RUN npm install -g yarn

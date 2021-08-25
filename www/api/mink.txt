@@ -1,0 +1,160 @@
+Given /^(?:|I )am on (?:|the )homepage$/
+    - Opens homepage.
+    # FeatureContext::iAmOnHomepage()
+
+ When /^(?:|I )go to (?:|the )homepage$/
+    - Opens homepage.
+    # FeatureContext::iAmOnHomepage()
+
+Given /^(?:|I )am on "(?P<page>[^"]+)"$/
+    - Opens specified page.
+    # FeatureContext::visit()
+
+ When /^(?:|I )go to "(?P<page>[^"]+)"$/
+    - Opens specified page.
+    # FeatureContext::visit()
+
+ When /^(?:|I )reload the page$/
+    - Reloads current page.
+    # FeatureContext::reload()
+
+ When /^(?:|I )move backward one page$/
+    - Moves backward one page in history.
+    # FeatureContext::back()
+
+ When /^(?:|I )move forward one page$/
+    - Moves forward one page in history
+    # FeatureContext::forward()
+
+ When /^(?:|I )press "(?P<button>(?:[^"]|\\")*)"$/
+    - Presses button with specified id|name|title|alt|value.
+    # FeatureContext::pressButton()
+
+ When /^(?:|I )follow "(?P<link>(?:[^"]|\\")*)"$/
+    - Clicks link with specified id|title|alt|text.
+    # FeatureContext::clickLink()
+
+ When /^(?:|I )fill in "(?P<field>(?:[^"]|\\")*)" with "(?P<value>(?:[^"]|\\")*)"$/
+    - Fills in form field with specified id|name|label|value.
+    # FeatureContext::fillField()
+
+ When /^(?:|I )fill in "(?P<value>(?:[^"]|\\")*)" for "(?P<field>(?:[^"]|\\")*)"$/
+    - Fills in form field with specified id|name|label|value.
+    # FeatureContext::fillField()
+
+ When /^(?:|I )fill in the following:$/
+    - Fills in form fields with provided table.
+    # FeatureContext::fillFields()
+
+ When /^(?:|I )select "(?P<option>(?:[^"]|\\")*)" from "(?P<select>(?:[^"]|\\")*)"$/
+    - Selects option in select field with specified id|name|label|value.
+    # FeatureContext::selectOption()
+
+ When /^(?:|I )additionally select "(?P<option>(?:[^"]|\\")*)" from "(?P<select>(?:[^"]|\\")*)"$/
+    - Selects additional option in select field with specified id|name|label|value.
+    # FeatureContext::additionallySelectOption()
+
+ When /^(?:|I )check "(?P<option>(?:[^"]|\\")*)"$/
+    - Checks checkbox with specified id|name|label|value.
+    # FeatureContext::checkOption()
+
+ When /^(?:|I )uncheck "(?P<option>(?:[^"]|\\")*)"$/
+    - Unchecks checkbox with specified id|name|label|value.
+    # FeatureContext::uncheckOption()
+
+ When /^(?:|I )attach the file "(?P[^"]*)" to "(?P<field>(?:[^"]|\\")*)"$/
+    - Attaches file to field with specified id|name|label|value.
+    # FeatureContext::attachFileToField()
+
+ Then /^(?:|I )should be on "(?P<page>[^"]+)"$/
+    - Checks, that current page PATH is equal to specified.
+    # FeatureContext::assertPageAddress()
+
+ Then /^the (?i)url(?-i) should match (?P<pattern>"([^"]|\\")*")$/
+    - Checks, that current page PATH matches regular expression.
+    # FeatureContext::assertUrlRegExp()
+
+ Then /^the response status code should be (?P<code>\d+)$/
+    - Checks, that current page response status is equal to specified.
+    # FeatureContext::assertResponseStatus()
+
+ Then /^the response status code should not be (?P<code>\d+)$/
+    - Checks, that current page response status is not equal to specified.
+    # FeatureContext::assertResponseStatusIsNot()
+
+ Then /^(?:|I )should see "(?P<text>(?:[^"]|\\")*)"$/
+    - Checks, that page contains specified text.
+    # FeatureContext::assertPageContainsText()
+
+ Then /^(?:|I )should not see "(?P<text>(?:[^"]|\\")*)"$/
+    - Checks, that page doesn't contain specified text.
+    # FeatureContext::assertPageNotContainsText()
+
+ Then /^(?:|I )should see text matching (?P<pattern>"(?:[^"]|\\")*")$/
+    - Checks, that page contains text matching specified pattern.
+    # FeatureContext::assertPageMatchesText()
+
+ Then /^(?:|I )should not see text matching (?P<pattern>"(?:[^"]|\\")*")$/
+    - Checks, that page doesn't contain text matching specified pattern.
+    # FeatureContext::assertPageNotMatchesText()
+
+ Then /^the response should contain "(?P<text>(?:[^"]|\\")*)"$/
+    - Checks, that HTML response contains specified string.
+    # FeatureContext::assertResponseContains()
+
+ Then /^the response should not contain "(?P<text>(?:[^"]|\\")*)"$/
+    - Checks, that HTML response doesn't contain specified string.
+    # FeatureContext::assertResponseNotContains()
+
+ Then /^(?:|I )should see "(?P<text>(?:[^"]|\\")*)" in the "(?P<element>[^"]*)" element$/
+    - Checks, that element with specified CSS contains specified text.
+    # FeatureContext::assertElementContainsText()
+
+ Then /^(?:|I )should not see "(?P<text>(?:[^"]|\\")*)" in the "(?P<element>[^"]*)" element$/
+    - Checks, that element with specified CSS doesn't contain specified text.
+    # FeatureContext::assertElementNotContainsText()
+
+ Then /^the "(?P<element>[^"]*)" element should contain "(?P<value>(?:[^"]|\\")*)"$/
+    - Checks, that element with specified CSS contains specified HTML.
+    # FeatureContext::assertElementContains()
+
+ Then /^the "(?P<element>[^"]*)" element should not contain "(?P<value>(?:[^"]|\\")*)"$/
+    - Checks, that element with specified CSS doesn't contain specified HTML.
+    # FeatureContext::assertElementNotContains()
+
+ Then /^(?:|I )should see an? "(?P<element>[^"]*)" element$/
+    - Checks, that element with specified CSS exists on page.
+    # FeatureContext::assertElementOnPage()
+
+ Then /^(?:|I )should not see an? "(?P<element>[^"]*)" element$/
+    - Checks, that element with specified CSS doesn't exist on page.
+    # FeatureContext::assertElementNotOnPage()
+
+ Then /^the "(?P<field>(?:[^"]|\\")*)" field should contain "(?P<value>(?:[^"]|\\")*)"$/
+    - Checks, that form field with specified id|name|label|value has specified value.
+    # FeatureContext::assertFieldContains()
+
+ Then /^the "(?P<field>(?:[^"]|\\")*)" field should not contain "(?P<value>(?:[^"]|\\")*)"$/
+    - Checks, that form field with specified id|name|label|value doesn't have specified value.
+    # FeatureContext::assertFieldNotContains()
+
+ Then /^the "(?P<checkbox>(?:[^"]|\\")*)" checkbox should be checked$/
+    - Checks, that checkbox with specified in|name|label|value is checked.
+    # FeatureContext::assertCheckboxChecked()
+
+ Then /^the "(?P<checkbox>(?:[^"]|\\")*)" checkbox should not be checked$/
+    - Checks, that checkbox with specified in|name|label|value is unchecked.
+    # FeatureContext::assertCheckboxNotChecked()
+
+ Then /^(?:|I )should see (?P<num>\d+) "(?P<element>[^"]*)" elements?$/
+    - Checks, that (?P<num>\d+) CSS elements exist on the page
+    # FeatureContext::assertNumElements()
+
+ Then /^print last response$/
+    - Prints last response to console.
+    # FeatureContext::printLastResponse()
+
+ Then /^show last response$/
+    - Opens last response content in browser.
+    # FeatureContext::showLastResponse()
+
