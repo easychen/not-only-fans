@@ -64,7 +64,7 @@ First we need to prepare a server with `docker` and `docker-compose` already ins
 ### Clone the code and start Docker
 
 ```bash
-git clone https://gitlab.com/easychen/not-only-fans.git
+git clone https://github.com/easychen/not-only-fans.git
 cd not-only-fans
 docker-compose up -d --build
 ```
