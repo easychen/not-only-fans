@@ -62,7 +62,7 @@ NotOnlyFans 是一个开源的、可以自己架设的类似 `onlyfans.com` 的�
 ### 克隆代码并启动Docker
 
 ```bash
-git clone https://gitlab.com/easychen/not-only-fans.git
+git clone https://github.com/easychen/not-only-fans.git
 cd not-only-fans
 docker-compose up -d  --build
 ```
