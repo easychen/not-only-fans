@@ -86,7 +86,7 @@ docker exec -it ${container_id} /bin/bash
 ### Initialize the web front end
 
 ```bash
-cd /app/client/ && yarn install && yarn build
+cd /app/client/ && yarn add sass && yarn install && yarn build
 ```
 
 ### Initialize the API
